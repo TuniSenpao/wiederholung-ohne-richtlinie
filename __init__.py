@@ -26,11 +26,11 @@ class ArztterminSkillOhneRichtlinie(MycroftSkill):
 
     @intent_handler('medikamente.intent')
     def add_unspecified_reminder(self, msg=None):
-        self.speak_dialog('medikamente.dialog')
+        self.speak_dialog('medikamente')
 
     @intent_handler('wiederholung.intent')
     def handleAllInformations(self, message):
-        self.speak_dialog('medikamente.dialog')
+        self.speak_dialog('medikamente')
 
     def stop(self, message=None):
         if self.__cancel_active():
