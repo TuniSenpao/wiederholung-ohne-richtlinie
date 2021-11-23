@@ -22,10 +22,7 @@ class ArztterminSkillOhneRichtlinie(MycroftSkill):
         super(ArztterminSkillOhneRichtlinie, self).__init__()
 
     def initialize(self):
-        if isinstance(self.bus, MessageBusClient):
-            self.bus.on('speak', self.prime)
-            self.bus.on('mycroft.skill.handler.complete', self.notify)
-            self.bus.on('mycroft.skill.handler.start', self.reset)
+        pass
 
     @intent_handler('medikamente.intent')
     def add_unspecified_reminder(self, msg=None):
